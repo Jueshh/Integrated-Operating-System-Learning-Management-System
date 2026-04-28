@@ -1,0 +1,51 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AppMaster.master.cs" Inherits="IOSMSystem.AppMaster" %>
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Integrated OS Learning Management System</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <asp:Literal ID="litDarkCss" runat="server" />
+</head>
+<body>
+    <form runat="server">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/Pages/Dashboard.aspx">Integrated OS Learning Management System</a>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Pages/Dashboard.aspx">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Pages/CpuScheduling.aspx">CPU Scheduling</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Pages/MemoryManagement.aspx">Memory Management</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Pages/Deadlock.aspx">Deadlock</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Pages/GanttChart.aspx">Gantt Chart</a>
+                        </li>
+                    </ul>
+                    <span class="navbar-text text-light me-3">
+                        Welcome, <asp:Label ID="lblUser" runat="server" />
+                    </span>
+                    <asp:Button ID="btnLogout" runat="server" Text="Logout"
+                        CssClass="btn btn-outline-light btn-sm"
+                        OnClick="btnLogout_Click" />
+                </div>
+            </div>
+        </nav>
+
+        <div class="container mt-4">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+
+    </form>
+</body>
+</html>

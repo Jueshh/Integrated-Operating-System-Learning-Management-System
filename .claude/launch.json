@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "OS-LMS ASP.NET",
+      "runtimeExecutable": "C:\\Program Files\\IIS Express\\iisexpress.exe",
+      "runtimeArgs": ["/path:E:\\IOSMSystem", "/port:5050", "/clr:v4.0"],
+      "port": 5050
+    }
+  ]
+}
