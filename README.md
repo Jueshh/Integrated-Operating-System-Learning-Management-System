@@ -57,18 +57,6 @@ All project documentation lives in the [`Documentation/`](Documentation/) folder
 | [`Documentation/Use case & ERD.docx`](Documentation/Use%20case%20%26%20ERD.docx) | Combined use case + ERD reference |
 | [`Documentation/GanttChart.xlsx`](Documentation/GanttChart.xlsx) | Project timeline as a styled spreadsheet (T01 through T08) |
 
-### Generator scripts
-
-Python scripts that regenerate the docs from source:
-
-- [`Documentation/generate_system_doc.py`](Documentation/generate_system_doc.py)
-- [`Documentation/generate_usecase.py`](Documentation/generate_usecase.py)
-- [`Documentation/generate_erd.py`](Documentation/generate_erd.py)
-- [`Documentation/generate_gantt_xlsx.py`](Documentation/generate_gantt_xlsx.py)
-
-Run with `python <script>.py` (requires `python-docx`, `openpyxl`,
-and `matplotlib`).
-
 ---
 
 ## Project Structure
