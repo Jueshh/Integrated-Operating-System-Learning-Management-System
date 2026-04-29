@@ -155,8 +155,6 @@ Need matrix, step-by-step Work-before / Work-after table.
 - All SQL queries are parameterised; no string concatenation.
 - Forms Authentication restricts access; only `Login.aspx`, `Register.aspx`,
   and `Default.aspx` are anonymous.
-- Fixed `<machineKey>` in `Web.config` keeps ViewState valid across
-  application restarts.
 - `Global.asax` `Application_Error` catches stale ViewState exceptions and
   redirects to a fresh page instead of showing a stack trace.
 
@@ -176,3 +174,11 @@ Need matrix, step-by-step Work-before / Work-after table.
 ## Authors
 
 **Group 7** — Integrated Operating System Learning Management System
+
+- Francisco, Stephanie Jean
+- Malonhao, Angel Rose
+- Cuyos, Juesril
+- Cuyos, Nino
+- Dosdos, Jhunlie
+- Quijano, Alfred
+- Pepito, Glenino
