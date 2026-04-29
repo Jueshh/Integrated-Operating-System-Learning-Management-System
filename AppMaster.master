@@ -1,4 +1,5 @@
 <%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AppMaster.master.cs" Inherits="IOSMSystem.AppMaster" %>
+
 <!DOCTYPE html>
 <html>
 <head runat="server">
@@ -32,8 +33,8 @@
                             <a class="nav-link" href="/Pages/GanttChart.aspx">Gantt Chart</a>
                         </li>
                     </ul>
-                    <span class="navbar-text text-light me-3">
-                        Welcome, <asp:Label ID="lblUser" runat="server" />
+                    <span class="navbar-text text-light me-3">Welcome,
+                        <asp:Label ID="lblUser" runat="server" />
                     </span>
                     <asp:Button ID="btnLogout" runat="server" Text="Logout"
                         CssClass="btn btn-outline-light btn-sm"

@@ -4,19 +4,19 @@ namespace IOSMSystem.Models
 {
     public class SafeStep
     {
-        public int    StepNo     { get; set; }
-        public string Process    { get; set; }
+        public int StepNo { get; set; }
+        public string Process { get; set; }
         public string WorkBefore { get; set; }
-        public string WorkAfter  { get; set; }
+        public string WorkAfter { get; set; }
     }
 
     public class BankersResult
     {
-        public bool           IsSafe       { get; set; }
-        public string         SafeSequence { get; set; }
-        public List<SafeStep> Steps        { get; set; }
-        public int[][]        NeedMatrix   { get; set; }
-        public string         ErrorMessage { get; set; }
+        public bool IsSafe { get; set; }
+        public string SafeSequence { get; set; }
+        public List<SafeStep> Steps { get; set; }
+        public int[][] NeedMatrix { get; set; }
+        public string ErrorMessage { get; set; }
     }
 
     public static class BankersAlgorithm
@@ -35,7 +35,7 @@ namespace IOSMSystem.Models
                         return new BankersResult
                         {
                             IsSafe = false,
-                            Steps  = new List<SafeStep>(),
+                            Steps = new List<SafeStep>(),
                             ErrorMessage = $"P{i}: Allocation[{j}] exceeds Max[{j}]."
                         };
                 }
@@ -52,13 +52,13 @@ namespace IOSMSystem.Models
                     return new BankersResult
                     {
                         IsSafe = false,
-                        Steps  = new List<SafeStep>(),
+                        Steps = new List<SafeStep>(),
                         ErrorMessage = $"Total allocations exceed total resources for R{j}."
                     };
 
-            var finish   = new bool[n];
+            var finish = new bool[n];
             var sequence = new List<string>();
-            var steps    = new List<SafeStep>();
+            var steps = new List<SafeStep>();
             bool progress = true;
 
             while (progress)
@@ -80,10 +80,10 @@ namespace IOSMSystem.Models
                         sequence.Add(pname);
                         steps.Add(new SafeStep
                         {
-                            StepNo     = steps.Count + 1,
-                            Process    = pname,
+                            StepNo = steps.Count + 1,
+                            Process = pname,
                             WorkBefore = "[" + string.Join(", ", before) + "]",
-                            WorkAfter  = "[" + string.Join(", ", work)   + "]"
+                            WorkAfter = "[" + string.Join(", ", work) + "]"
                         });
                         progress = true;
                     }
@@ -95,10 +95,10 @@ namespace IOSMSystem.Models
 
             return new BankersResult
             {
-                IsSafe       = isSafe,
+                IsSafe = isSafe,
                 SafeSequence = isSafe ? string.Join(" → ", sequence) : "No safe sequence",
-                Steps        = steps,
-                NeedMatrix   = need
+                Steps = steps,
+                NeedMatrix = need
             };
         }
     }
